@@ -82,6 +82,33 @@ SELECT name
 FROM people
 WHERE name LIKE '_r%';
 
+#--------------------
+# Aggregate Functions
+#--------------------
+
+# SUM() AVG() MAX() MIN()
+SELECT MAX(duration)
+FROM films;
+
+SELECT AVG(gross)
+FROM films
+WHERE title LIKE 'A%'
+
+# AS
+SELECT title, (gross - budget) AS net_profit
+FROM films;
+
+SELECT AVG(duration / 60.0) AS avg_duration_hours
+FROM films;
+
+SELECT (COUNT(deathdate) * 100.0 / COUNT(*)) AS percentage_dead
+FROM people;
+
+#---------------------------
+# Sorting Grouping and Joins
+#---------------------------
+
+
 
 
 
